@@ -4,7 +4,7 @@ import './header.css';
 class Header extends Component {
     render() {
         return <div className="header">
-            Todo Header
+            Todo App
         </div>;
     }
 }

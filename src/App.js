@@ -32,6 +32,7 @@ class App extends Component {
       const currentTodoArray = this.state.toddoArray;
       currentTodoArray.push({ workName: event.target.value });
       this.setState({ toddoArray: currentTodoArray });
+      event.target.value = null;
     }
   }
 
