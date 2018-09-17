@@ -18,6 +18,7 @@
         "sourceType": "module"
     },
     "rules": {
+        "react/prop-types": 0,
         "quotes": [
             "error",
             "single"

@@ -1,19 +1,23 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './todo.css';
+import { deleteTodoAction } from '../../actions/deleteTodoAction';
+import { bindActionCreators } from 'C:/Users/ROCK STAR/AppData/Local/Microsoft/TypeScript/3.0/node_modules/redux';
 
 class Todo extends Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         return (
             <div className="to-do">
                 <span className="to-do-name">{this.props.item.workName}</span>
                 <span className="space"></span>
-                <button className="to-do-delete" onClick={() => this.props.deleteTodo(this.props.index)}>Delete</button>
+                <button className="to-do-delete" onClick={() => this.props.deleteTodoById(this.props.index)}>Delete</button>
             </div>
         );
     }
 }
 
-export default Todo;
+const mapDistachToProps = () => dispatch => {
+    return bindActionCreators({ deleteTodoById: deleteTodoAction }, dispatch);
+};
+
+export default connect(null, mapDistachToProps)(Todo);
