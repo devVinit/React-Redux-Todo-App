@@ -14,7 +14,7 @@ const render = () => {
         <Provider store={store}><App /></Provider>, document.getElementById('root'));
 };
 
-// store.subscribe(render);
+store.subscribe(render);
 render();
 
 registerServiceWorker();
