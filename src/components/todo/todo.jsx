@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './todo.css';
 import { deleteTodoAction } from '../../actions/deleteTodoAction';
-import { bindActionCreators } from 'C:/Users/ROCK STAR/AppData/Local/Microsoft/TypeScript/3.0/node_modules/redux';
+import { bindActionCreators } from 'redux';
 
 class Todo extends Component {
     render() {
